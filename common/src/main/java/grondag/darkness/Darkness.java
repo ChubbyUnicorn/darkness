@@ -66,13 +66,13 @@ public class Darkness {
 			}
 		}
 
-		ignoreMoonPhase = properties.computeIfAbsent("ignore_moon_phase", (a) -> "false").equals("true");
-		blockLightOnly = properties.computeIfAbsent("only_affect_block_light", (a) -> "false").equals("true");
-		darkOverworld = properties.computeIfAbsent("dark_overworld", (a) -> "true").equals("true");
-		darkDefault = properties.computeIfAbsent("dark_default", (a) -> "true").equals("true");
-		darkNether = properties.computeIfAbsent("dark_nether", (a) -> "true").equals("true");
-		darkEnd = properties.computeIfAbsent("dark_end", (a) -> "true").equals("true");
-		darkSkyless = properties.computeIfAbsent("dark_skyless", (a) -> "true").equals("true");
+		ignoreMoonPhase = true;
+		blockLightOnly = false;
+		darkOverworld = true;
+		darkDefault = false;
+		darkNether = false;
+		darkEnd = false;
+		darkSkyless = false;
 
 		try {
 			darkNetherFogConfigured = Double.parseDouble(properties.computeIfAbsent("dark_nether_fog", (a) -> "0.5").toString());
